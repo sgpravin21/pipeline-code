@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Testing') {
+            steps {
+                echo 'This is a testing phase'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'This is a building phase'
+            }
+        }
+        
+        stage('Deploy to testing server') {
+            steps {
+                echo 'This is a deploying to testing server phase'
+            }
+        }
+        
+        stage('Deploy to PRODUCTION server') {
+            steps {
+                echo 'This is a deploying to PRODUCTION server phase'
+                bat '''
+                    dir
+                    HOSTNAME
+                    IPCONFIG
+                '''
+            }
+        }
+    }
+}
