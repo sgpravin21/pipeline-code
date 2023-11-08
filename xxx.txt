@@ -1,0 +1,3 @@
+this is a new file created in other EC2 instance
+this is xxx file
+this is new line of code
